@@ -1,3 +1,20 @@
+"""
+Task Organizer with Auto-Prioritization
+
+A Python application that automatically prioritizes tasks based on:
+- Deadline urgency
+- User-defined importance
+
+Key Components:
+1. Tkinter GUI Interface
+2. SQLite Database
+3. Priority Calculation Engine
+
+Author: YourName
+License: MIT
+Version: 1.0
+"""
+
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 import sqlite3
@@ -63,6 +80,20 @@ def obtener_tareas_completadas():
 
 # Calcular la prioridad de una tarea
 def calcular_prioridad(plazo, importancia):
+    """
+    Calculates dynamic task priority score
+    
+    Args:
+        deadline (str): YYYY-MM-DD format
+        importance (int): 1-10 scale
+    
+    Returns:
+        int: Priority score (higher = more urgent)
+    
+    Example:
+        >>> calculate_priority("2024-12-31", 5)
+        25
+    """
     hoy = datetime.now().date()
     plazo = datetime.strptime(plazo, "%Y-%m-%d").date()
     dias_restantes = (plazo - hoy).days
