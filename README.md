@@ -1,79 +1,82 @@
-# 🎯 **Organizador de Tareas con Priorización Automática**
+# 🚀 Task Prioritization Manager
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-**Organizador de Tareas con Priorización Automática** es una aplicación de escritorio que te ayuda a gestionar tus tareas de manera eficiente. El software calcula automáticamente la prioridad de cada tarea en función de su **plazo** y **importancia**, permitiéndote enfocarte en lo más urgente e importante.
-
----
-
-## 🚀 **Características Principales**
-
-- ✅ **Priorización automática**: Calcula la prioridad de las tareas en función del plazo y la importancia.
-- ✅ **Interfaz gráfica intuitiva**: Usa `Tkinter` para una experiencia de usuario sencilla y amigable.
-- ✅ **Base de datos SQLite**: Almacena las tareas de manera persistente.
-- ✅ **Funcionalidades avanzadas**:
-  - Añadir, editar y eliminar tareas.
-  - Marcar tareas como completadas.
-  - Ver tareas pendientes y completadas en tablas separadas.
-  - Eliminar tareas completadas individualmente o borrar toda la lista.
+**Task Prioritization Manager** is a desktop application that helps you manage tasks efficiently. The software automatically calculates task priority based on **deadline** and **importance**, allowing you to focus on what's most urgent and important.
 
 ---
 
-## 🛠️ **Cómo Funciona**
+## 🌟 Key Features
 
-### 1️⃣ **Captura de Datos**
-El usuario ingresa los siguientes datos para cada tarea:
-- **Nombre**: Nombre de la tarea.
-- **Descripción**: Detalles adicionales sobre la tarea.
-- **Plazo**: Fecha límite en formato `YYYY-MM-DD`.
-- **Importancia**: Nivel de importancia de la tarea (del 1 al 10).
-
-### 2️⃣ **Cálculo de Prioridad**
-La prioridad de cada tarea se calcula automáticamente usando la siguiente fórmula:
-prioridad = importancia * 10 - días_restantes
-
-- **Importancia**: Nivel de importancia de la tarea (del 1 al 10).
-- **Días restantes**: Diferencia entre la fecha actual y el plazo de la tarea.
-
-**Ejemplo**:
-- Si una tarea tiene una importancia de `8` y faltan `5` días para su plazo: prioridad = ``8 * 10 - 5 = 75``
-
-### 3️⃣ **Almacenamiento en Base de Datos**
-Las tareas se almacenan en una base de datos SQLite (`tareas.db`) con la siguiente estructura:
-
-| Columna      | Tipo        | Descripción                              |
-|--------------|-------------|------------------------------------------|
-| `id`         | INTEGER     | Identificador único de la tarea.         |
-| `nombre`     | TEXT        | Nombre de la tarea.                      |
-| `descripcion`| TEXT        | Descripción de la tarea.                 |
-| `plazo`      | TEXT        | Fecha límite de la tarea (`YYYY-MM-DD`). |
-| `importancia`| INTEGER     | Nivel de importancia (1-10).             |
-| `prioridad`  | INTEGER     | Prioridad calculada automáticamente.     |
-| `completada` | INTEGER     | Estado de la tarea (0: pendiente, 1: completada). |
-
-### 4️⃣ **Interfaz Gráfica**
-La interfaz gráfica está dividida en dos secciones principales:
-- **Tareas Pendientes**: Muestra las tareas ordenadas por prioridad (de mayor a menor).
-- **Tareas Completadas**: Muestra las tareas que han sido marcadas como completadas.
+- ✅ **Automatic prioritization**: Calculates task priority based on deadline and importance
+- ✅ **Intuitive graphical interface**: Uses `Tkinter` for a simple, user-friendly experience
+- ✅ **SQLite database**: Persistent task storage
+- ✅ **Advanced functionality**:
+  - Add, edit, and delete tasks
+  - Mark tasks as completed
+  - View pending and completed tasks in separate tables
+  - Delete completed tasks individually or clear the entire list
 
 ---
 
-## 📥 **Instalación**
+## 🛠️ How It Works
 
-### 1️⃣ **Requisitos**
+### 1️⃣ **Data Input**
+The user enters the following data for each task:
+- **Name**: Task name
+- **Description**: Additional details about the task
+- **Deadline**: Due date in `YYYY-MM-DD` format
+- **Importance**: Importance level (1-10 scale)
+
+### 2️⃣ **Priority Calculation**
+Each task's priority is automatically calculated using:
+`priority = importance × 10 - days_remaining`
+
+Where:
+- **Importance**: Task importance level (1-10)
+- **Days remaining**: Difference between current date and deadline
+
+**Example**:
+- For a task with importance `8` and `5` days remaining:  
+  `priority = 8 × 10 - 5 = 75`
+
+### 3️⃣ **Database Storage**
+Tasks are stored in an SQLite database (`tasks.db`) with this structure:
+
+| Column       | Type     | Description                              |
+|--------------|----------|------------------------------------------|
+| `id`         | INTEGER  | Unique task identifier                   |
+| `name`       | TEXT     | Task name                                |
+| `description`| TEXT     | Task description                         |
+| `deadline`   | TEXT     | Due date (`YYYY-MM-DD`)                  |
+| `importance` | INTEGER  | Importance level (1-10)                  |
+| `priority`   | INTEGER  | Automatically calculated priority        |
+| `completed`  | INTEGER  | Task status (0: pending, 1: completed)  |
+
+### 4️⃣ **Graphical Interface**
+The GUI is divided into two main sections:
+- **Pending Tasks**: Shows tasks ordered by priority (highest first)
+- **Completed Tasks**: Displays tasks marked as completed
+
+---
+
+## 📥 Installation
+
+### 1️⃣ **Requirements**
 - Python 3.x
-- Biblioteca `tkinter` (viene por defecto con Python).
-- Biblioteca `sqlite3` (viene por defecto con Python).
+- `tkinter` library (included with Python)
+- `sqlite3` library (included with Python)
 
-### 2️⃣ **Clonar el Repositorio**
+### 2️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/tuusuario/organizador-tareas.git
-cd organizador-tareas
+git clone https://github.com/yourusername/Transformacion-Digital-Proyecto.git
+cd task-manager
 ```
 
-3️⃣ Ejecutar el Programa
-```bash
-python main.py
+### 3️⃣ Run the Program
+```
+python task_organizer.py
 ```
