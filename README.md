@@ -9,6 +9,14 @@
 
 ---
 
+## 💡 Motivation
+**"I constantly struggled with task overload - forgetting deadlines, misjudging priorities, and feeling overwhelmed. This tool is my solution to:**  
+✅ Stop guessing what to do first  
+✅ Never miss important deadlines again  
+✅ Feel in control of my daily tasks  
+
+"It's the organizer I wish I had when everything felt urgent but I didn't know where to start."
+
 ## 🌟 Key Features
 
 - ✅ **Automatic prioritization**: Calculates task priority based on deadline and importance
@@ -79,4 +87,17 @@ cd task-manager
 ### 3️⃣ Run the Program
 ```
 python task_organizer.py
+```
+
+## 📝 Example for Adding a high-priority task:
+Name: "Finish Project Report"
+
+Description: "Quarterly financial analysis"
+
+Deadline: "2024-07-15"  # 10 days from today
+
+Importance: 9
+
+``` bash
+System calculates: priority = (9×10) - 10 = 80
 ```
