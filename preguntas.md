@@ -106,3 +106,68 @@ Se podría adaptar para gestionar tareas en desarrollo de software, priorizando 
 ## Si no has utilizado THD, ¿cómo podrías implementarlas para enriquecer tu solución?
 
 Se podrían integrar tecnologías como IA para analizar patrones de uso y sugerir mejoras en la priorización, o blockchain para garantizar la integridad y trazabilidad de las tareas.
+
+---
+
+# Análisis de Utilidad y Aplicación - Fase 2
+
+## Criterio 6a) Objetivos estratégicos
+
+**¿Qué objetivos estratégicos específicos de la empresa aborda tu software?**
+- El software ayuda a gestionar mejor el tiempo del equipo, automatizando la organización de tareas según su urgencia e importancia. Además, digitaliza procesos que antes se hacían manualmente con listas en papel o Excel.
+
+**¿Cómo se alinea el software con la estrategia general de digitalización?**
+- Forma parte de la transformación digital al eliminar métodos analógicos, centralizando toda la planificación en un sistema accesible que además genera datos para mejorar la productividad.
+
+## Criterio 6b) Áreas de negocio y comunicaciones
+
+**¿Qué áreas de la empresa (producción, negocio, comunicaciones) se ven más beneficiadas con tu software?**
+- Las áreas más beneficiadas son producción (para organizar tareas operativas), negocio (para gestionar proyectos) y comunicaciones (para coordinar entre departamentos), ya que todas necesitan priorizar trabajo diario.
+
+**¿Qué impacto operativo esperas en las operaciones diarias?**
+- Se reducirá el tiempo perdido en planificación y se evitarán olvidos de tareas importantes, haciendo el flujo de trabajo más ágil y confiable.
+
+## Criterio 6c) Áreas susceptibles de digitalización
+
+**¿Qué áreas de la empresa son más susceptibles de ser digitalizadas con tu software?**
+- La gestión de proyectos entre equipos, el plan de mantenimiento de equipos y el seguimiento de objetivos por empleado son ideales para digitalizar con esta herramienta.
+
+**¿Cómo mejorará la digitalización las operaciones en esas áreas?**
+- Al digitalizarse, habrá menos errores al priorizar, se podrá acceder a las tareas desde cualquier lugar y quedará registro de todo lo completado.
+
+## Criterio 6d) Encaje de áreas digitalizadas (AD)
+
+**¿Cómo interactúan las áreas digitalizadas con las no digitalizadas?**
+- El software genera informes imprimibles para quienes prefieren papel y envía notificaciones por email, funcionando como puente entre ambos formatos de trabajo.
+
+**¿Qué soluciones o mejoras propondrías para integrar estas áreas?**
+- Podría añadirse sincronización con calendarios físicos y pantallas en zonas comunes que muestren las tareas prioritarias del día.
+
+## Criterio 6e) Necesidades presentes y futuras
+
+**¿Qué necesidades actuales de la empresa resuelve tu software?**
+- Resuelve la falta de un sistema centralizado para organizar tareas, la dificultad para priorizar objetivamente y el problema de medir la carga real de trabajo.
+
+## Criterio 6f) Relación con tecnologías
+
+**¿Qué tecnologías habilitadoras has empleado y cómo impactan en las áreas de la empresa?**
+- Usamos SQLite para guardar los datos localmente, Tkinter para una interfaz simple y Python que permite fácil integración. Esto hace el sistema accesible, sin costes adicionales y compatible con cualquier equipo.
+
+**¿Qué beneficios específicos aporta la implantación de estas tecnologías?**
+- No requiere licencias, funciona en cualquier ordenador y es fácil de mantener, ideal para empresas que inician su digitalización.
+
+## Criterio 6g) Brechas de seguridad
+
+**¿Qué posibles brechas de seguridad podrían surgir al implementar tu software?**
+- Principalmente acceso no autorizado a la base de datos local o pérdida de información por fallos técnicos, al ser un sistema que trabaja con datos locales.
+
+**¿Qué medidas concretas propondrías para mitigarlas?**
+- Implementar cifrado del archivo de base de datos, hacer copias de seguridad automáticas y llevar registro de cambios importantes en las tareas.
+
+## Criterio 6h) Tratamiento de datos y análisis
+
+**¿Cómo se gestionan los datos en tu software y qué metodologías utilizas?**
+- Los datos se validan al ingresarse, se almacenan ordenadamente en SQLite y los cálculos de prioridad son automáticos para evitar inconsistencias.
+
+**¿Qué haces para garantizar la calidad y consistencia de los datos?**
+- El sistema verifica la integridad de los datos al iniciar, tiene pruebas para las funciones clave y permite recuperar información si hay problemas.
